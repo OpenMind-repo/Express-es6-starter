@@ -1,0 +1,42 @@
+{
+  "name": "ex-es6",
+  "version": "1.0.0",
+  "description": "express js es6 starter",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node ./src/server/Main/src/server.js"
+  },
+  "dependencies": {
+    "babel": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-preset-es2015": "*",
+    "body-parser": "*",
+    "compression": "*",
+    "connect-timeout": "*",
+    "cookie-parser": "*",
+    "css-loader": "*",
+    "debug": "*",
+    "express": "*",
+    "knex": "*",
+    "bookshelf" :"*",
+    "module-alias": "*",
+    "morgan": "*",
+    "npm-run-all": "*",
+    "socket.io": "*",
+    "mysql": "*",
+    "multer": "*"
+
+  },
+  "_moduleAliases": {
+    "_Core": "src/server/Core",
+    "_Module": "src/server/Module",
+    "#Conf": "conf"
+  },
+  "author": "gerald halomoan samosir",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0"
+  }
+}
