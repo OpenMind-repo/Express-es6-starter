@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "babel-node ./src/server/Main/src/server.js"
+
   },
   "dependencies": {
     "babel": "*",
@@ -25,7 +26,8 @@
     "npm-run-all": "*",
     "socket.io": "*",
     "mysql": "*",
-    "multer": "*"
+    "multer": "*",
+    "commander" : "*"
 
   },
   "_moduleAliases": {
