@@ -18,6 +18,9 @@ const App =  Express()
 
 // App.use('/Shops', Ecomercemodule)
 
+
+
+
 App.get('/',(req,res)=>{
     res.status(200)
     res.json("welcome to api")
