@@ -27,13 +27,16 @@
     "socket.io": "*",
     "mysql": "*",
     "multer": "*",
-    "commander" : "*"
+    "commander" : "*",
+    "jwt-simple":"*",
+    "password-hash":"*"
 
   },
   "_moduleAliases": {
     "_Core": "src/server/Core",
     "_Module": "src/server/Module",
-    "#Conf": "conf"
+    "#Conf": "conf",
+    "*Catcherr":"catcherr"
   },
   "author": "gerald halomoan samosir",
   "license": "MIT",

@@ -12,14 +12,16 @@ const App =  Express()
  */
 
 
-// const { Blogmodule  ,Ecomercemodule } = require('_Module')
-
-// App.use('/Blogs', Blogmodule)
-
-// App.use('/Shops', Ecomercemodule)
 
 
+/**
+ * registered core api to Api
+ */
 
+const {usersApi} = require("_Core")
+
+
+App.use('/userscoreapi',usersApi.usersApi)
 
 App.get('/',(req,res)=>{
     res.status(200)

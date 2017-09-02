@@ -25,6 +25,12 @@ App.disable('x-powered-by');
 App.use(compression());
 
 
+App.use(logger('dev'));
+App.use(bodyParser.json())
+App.use(bodyParser.urlencoded({ extended: true }));
+App.use(cookieParser());
+
+
 /**
  * set for key config 
  * set your app key
@@ -60,10 +66,7 @@ App.use((req,res,next)=>{
     next();
 })
 
-App.use(logger('dev'));
-App.use(bodyParser.json())
-App.use(bodyParser.urlencoded({ extended: true }));
-App.use(cookieParser());
+
 
 
 //static server
