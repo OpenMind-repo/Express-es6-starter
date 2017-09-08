@@ -7,10 +7,11 @@ moduleAlias()
 
 const App =  Express()
 
+App.disable('x-powered-by');
+
 /**
  * registered module to Api
  */
-
 
 
 

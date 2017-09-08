@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "start": "babel-node ./src/server/Main/src/server.js"
-
   },
   "dependencies": {
     "babel": "*",
@@ -13,30 +12,34 @@
     "babel-loader": "*",
     "babel-preset-es2015": "*",
     "body-parser": "*",
+    "bookshelf": "*",
+    "bookshelf-bcrypt": "^2.1.0",
+    "commander": "*",
     "compression": "*",
     "connect-timeout": "*",
     "cookie-parser": "*",
     "css-loader": "*",
     "debug": "*",
     "express": "*",
+    "joi": "*",
+    "jwt-simple": "*",
     "knex": "*",
-    "bookshelf" :"*",
+    "lodash.difference": "*",
     "module-alias": "*",
     "morgan": "*",
-    "npm-run-all": "*",
-    "socket.io": "*",
-    "mysql": "*",
     "multer": "*",
-    "commander" : "*",
-    "jwt-simple":"*",
-    "password-hash":"*"
-
+    "mysql": "*",
+    "npm-run-all": "*",
+    "password-hash": "*",
+    "socket.io": "*",
+    "xtend": "*"
   },
   "_moduleAliases": {
     "_Core": "src/server/Core",
     "_Module": "src/server/Module",
     "#Conf": "conf",
-    "*Catcherr":"catcherr"
+    "*Catcherr": "catcherr",
+    "baseMvc": "src/server/Core/Express-es6-starter-core-BaseMVC/src/"
   },
   "author": "gerald halomoan samosir",
   "license": "MIT",
