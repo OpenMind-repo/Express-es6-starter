@@ -17,7 +17,7 @@ export default   class baseController {
      * @param {*} res response for client
      */
    async  get (req,res){
-        const  Model  =   require("../../../"+req.headers.modelpath ).default        
+        const  Model  =   require(req.headers.modelpath ).default        
         let params =  req.query;
         let data,err;
         [err,data] = await  Catcherr(Model.findAll(params,{withRelated:req.headers.related}))
@@ -46,7 +46,7 @@ export default   class baseController {
      * @param {*} res response for client
      */
     async create(req,res){
-        const  Model  =   require("../../../"+req.headers.modelpath ).default        
+        const  Model  =   require(req.headers.modelpath ).default        
         let data = req.body;
         let result,err;
         [err,result]  = await Catcherr (Model.create(data))
@@ -66,7 +66,7 @@ export default   class baseController {
      * @param {*} res response for client
      */
     async update(req,res){
-        const  Model  =   require("../../../"+req.headers.modelpath ).default        
+        const  Model  =   require(req.headers.modelpath ).default        
         let params = req.query
         let dataupdated = req.body;
         let result ,err ;
@@ -86,7 +86,7 @@ export default   class baseController {
      * @param {*} res response for client
      */
     async delete(req,res){
-         const  Model  =   require("../../../"+req.headers.modelpath ).default        
+         const  Model  =   require(req.headers.modelpath ).default        
         let params  = req.query;
         let result , err ,data ;
         [err, data]  =  await Catcherr( Model.forge(params).fetch())        

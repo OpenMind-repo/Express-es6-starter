@@ -25,6 +25,9 @@ module.exports = function modelBase (bookshelf, params) {
            ? this.validate.keys(baseValidation)
            : Joi.object(this.validate).keys(baseValidation)
 
+        //declareate for update
+        this.validateUpdate = Joi.object(this.validateUpdate).keys(baseValidation)
+  
         this.on('saving', this.validateSave)
       }
     },
@@ -35,9 +38,20 @@ module.exports = function modelBase (bookshelf, params) {
     let  validation
       // model is not new or update method explicitly set
       if ((model && !model.isNew()) || (options && (options.method === 'update' || options.patch === true))) {
-        let schemaKeys = this.validate._inner.children.map(function (child) {
-          return child.key
-        })
+        
+
+        let schemaKeys = ""
+        if(options.method === 'update'){
+            schemaKeys =  this.validateUpdate._inner.children.map(function(child){
+              return  child.key
+          })
+        }
+        else{
+          schemaKeys =  this.validate._inner.children.map(function (child) {
+              return child.key
+            })
+        }
+
         let presentKeys = Object.keys(attrs)
         let optionalKeys = difference(schemaKeys, presentKeys)
         // only validate the keys that are being updated

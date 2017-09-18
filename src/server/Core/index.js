@@ -1,6 +1,5 @@
 import {usersApi } from  './Express-es6-starter-core-users/src/'
 
-import  {Models as _BaseModel}   from   "./Express-es6-starter-core-BaseMVC/src/" 
+import userModel from  './Express-es6-starter-core-users/src/model'
 
-
-export {usersApi, _BaseModel}
+export {usersApi  ,userModel}

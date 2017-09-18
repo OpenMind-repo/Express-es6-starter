@@ -278,7 +278,7 @@ export default new class Response {
                 message: "please check your request maybe wrong",
                 result : [],
                 err : {
-                        errmessage : ""
+                        errmessage : err.sqlMessage
                     }
             }
         }
@@ -297,7 +297,7 @@ export default new class Response {
             this.Response = {
                 code:"200",
                 message: tablename,
-                result : Array.isArray(data)?data:[data],
+                result : (data.length != undefined)?data:[data],
                 err : {
                         errmessage : ""
                     }
